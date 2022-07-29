@@ -1,0 +1,9 @@
+[submodule "vendor/imgui"]
+	path = vendor/imgui
+	url = https://github.com/ocornut/imgui.git
+[submodule "vendor/imgui_club"]
+	path = vendor/imgui_club
+	url = https://github.com/ocornut/imgui_club
+[submodule "data/chip8-roms"]
+	path = data/chip8-roms
+	url = https://github.com/kripod/chip8-roms.git
