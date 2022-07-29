@@ -1,0 +1,62 @@
+{
+	"folders": [
+		{
+            "name": "chip8",
+			"path": ".."
+		}
+    ],
+    "settings": {},
+    "tasks": {
+        "version": "2.0.0",
+        "tasks": [
+            {
+                "type": "shell",
+                "label": "Build CHIP-8 (debug)",
+                "command": "mkdir -p build/; cd build/; cmake -DCMAKE_BUILD_TYPE=Debug ..; make",
+                "args": [
+                ],
+                "group": {
+                    "kind": "build",
+                    "isDefault": true
+                },
+            },
+            {
+                "type": "shell",
+                "label": "Build CHIP-8 (release)",
+                "command": "mkdir -p build/; cd build/; cmake -DCMAKE_BUILD_TYPE=Release ..; make",
+                "args": [
+                ],
+                "group": {
+                    "kind": "build",
+                    "isDefault": true
+                },
+            }
+        ]
+    },
+    "launch": {
+        "configurations": [
+            {
+                "name": "CHIP-8",
+                "type": "cppdbg",
+                "request": "launch",
+                "program": "${workspaceFolder}/build/bin/Debug/Emulator",
+                "args": [],
+                "stopAtEntry": false,
+                "cwd": "${workspaceFolder}",
+                "environment": [],
+                "externalConsole": false,
+                "MIMode": "gdb",
+                "setupCommands": [
+                    {
+                        "description": "Enable pretty-printing for gdb",
+                        "text": "-enable-pretty-printing",
+                        "ignoreFailures": true
+                    }
+                ],
+                //"preLaunchTask": "C/C++: gcc build active file",
+                "miDebuggerPath": "/usr/bin/gdb"
+            }
+        ],
+        "compounds": []
+    }
+}
