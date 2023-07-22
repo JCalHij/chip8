@@ -1,0 +1,32 @@
+# This is a comment.
+
+# MACRO generates a macro; all usages
+# of the macro anywhere will be
+# automatically replaced by the 
+# contents of it. It is basically
+# an inline function. The compiler
+# keeps track of all macros
+MACRO PushStack
+    # EMIT directly writes the specified
+    # value to a file
+    EMIT 0x00
+ENDMACRO
+
+# FUNCTION generates a function that
+# can be called by other code
+FUNCTION MyFunction
+    # Returns from function and goes
+    # back to the place where it was
+    # called.
+    RETURN
+ENDFUNCTION
+
+# Main application code starts with
+# BEGIN-CODE and ends with END-CODE.
+# The main application code will 
+# always start to be written at 0x0.
+BEGIN-CODE
+    # Jumps to wherever MyFunction is
+    # defined.
+    CALL MyFunction
+END-CODE
