@@ -7,3 +7,6 @@
 [submodule "data/chip8-roms"]
 	path = data/chip8-roms
 	url = https://github.com/kripod/chip8-roms.git
+[submodule "vendor/SDL"]
+	path = vendor/SDL
+	url = https://github.com/libsdl-org/SDL.git

@@ -4,3 +4,5 @@ target_include_directories(ImGui PUBLIC "imgui/")
 
 add_library(ImGui_MemoryEditor INTERFACE)
 target_include_directories(ImGui_MemoryEditor INTERFACE "imgui_club/")
+
+add_subdirectory(SDL)
