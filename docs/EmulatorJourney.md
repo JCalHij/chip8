@@ -1,4 +1,4 @@
-# Journey
+# Emulator Journey
 [toc]
 
 ## Introduction
